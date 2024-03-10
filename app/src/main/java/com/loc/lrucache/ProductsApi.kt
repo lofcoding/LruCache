@@ -7,7 +7,7 @@ import retrofit2.http.GET
 interface ProductsApi {
 
     @GET("products")
-    fun getProducts(): List<Product>
+    suspend fun getProducts(): List<Product>
 
     companion object {
         val instance by lazy {
